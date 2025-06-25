@@ -1,0 +1,25 @@
+{
+  "recipient_email": "joshikartavya78@gmail.com",
+  "channels": [
+    {
+      "name": "3Blue1Brown",
+      "id": "UCYO_jab_esuFRV4b17AJtAw"
+    },
+    {
+      "name": "FreeCodeCamp",
+      "id": "UCR2E1AA_XyI324hgw8aR0g"
+    },
+    {
+      "name": "Kartavya Joshi",
+      "id": "UCb9g9sFgGbRriEZwE808dZw"
+    }
+  ],
+  "keywords": [
+    "AI",
+    "neural network",
+    "python",
+    "machine learning",
+    "web development",
+    "API"
+  ]
+}
