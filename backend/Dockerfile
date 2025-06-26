@@ -10,13 +10,12 @@ ENV PYTHONUNBUFFERED 1
 # 3. Set a working directory inside the container.
 WORKDIR /app
 
-# 4. Copy the requirements file and install dependencies.
-COPY requirements.txt .
+# Copy the requirements file from the backend folder
+COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 5. Copy the rest of our application code into the container.
-# We are copying the entire 'app' subfolder.
-COPY ./app /app/app
+# Copy the entire backend application code from the backend/app subfolder
+COPY backend/app /app/app
 
 # 6. Expose the port the app will run on.
 # FastAPI/uvicorn runs on port 8000 by default.
