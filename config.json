@@ -12,10 +12,6 @@
     {
       "name": "Kartavya Joshi",
       "id": "UCb9g9sFgGbRriEZwE808dZw"
-    },
-    {
-      "name": "Firespot",
-      "id": "UCz8QaiQxApLq8sLNcszYyJw"
     }
   ],
   "keywords": [
@@ -27,8 +23,6 @@
     "API",
     "Next.js",
     "React",
-    "Tailwind CSS",
-    "Gaza",
-    "Iran"
+    "Tailwind CSS"
   ]
 }
