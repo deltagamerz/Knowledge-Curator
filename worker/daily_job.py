@@ -1,7 +1,7 @@
 # main.py (Version 3 with Improved Email Formatting)
 import sys
 from datetime import datetime
-from agent_tools import (
+from worker.agent_tools import (
     load_config,
     get_new_videos_from_rss,
     get_transcript,
@@ -173,7 +173,7 @@ def main():
 if __name__ == "__main__":
     # We are calling the function that runs the daily check directly.
     # This makes our intent clear when we set up the server command.
-    from agent_tools import load_config
+    from worker.agent_tools import load_config
     
     config = load_config()
     run_daily_check(config)
