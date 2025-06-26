@@ -171,4 +171,9 @@ def main():
     print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Agent's work is done.")
 
 if __name__ == "__main__":
-    main()
+    # We are calling the function that runs the daily check directly.
+    # This makes our intent clear when we set up the server command.
+    from agent_tools import load_config
+    
+    config = load_config()
+    run_daily_check(config)

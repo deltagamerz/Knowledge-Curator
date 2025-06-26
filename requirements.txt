@@ -1,0 +1,6 @@
+# requirements.txt
+
+google-generativeai
+python-dotenv
+youtube-transcript-api
+feedparser

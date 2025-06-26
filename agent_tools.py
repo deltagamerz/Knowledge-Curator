@@ -11,27 +11,21 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from dotenv import load_dotenv
 
 # --- SETUP ---
-# Load environment variables from .env file to protect sensitive information
 load_dotenv()
-# Configure the Gemini API client with the key from our .env file
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-# Initialize the specific Gemini Pro model we'll be using
 model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
 # --- CONFIGURATION LOADER ---
 def load_config():
-    """Loads the user's settings from the config.json file."""
     with open('config.json', 'r') as f:
         return json.load(f)
 
 def get_video_id(youtube_url):
-    """Extracts the YouTube video ID from a URL."""
     if "watch?v=" in youtube_url:
         return youtube_url.split('v=')[-1].split('&')[0]
     elif "youtu.be/" in youtube_url:
         return youtube_url.split('/')[-1].split('?')[0]
     raise ValueError("Invalid YouTube URL")
-# ^^^^^ PASTE THE FUNCTION HERE ^^^^^
 
 # --- YOUTUBE TOOLS ---
 def get_new_videos_from_rss(channel_id):
