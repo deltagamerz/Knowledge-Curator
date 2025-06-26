@@ -1,7 +1,7 @@
-# worker/Dockerfile
+# worker/Dockerfile (SIMPLE version)
 FROM python:3.11-slim
 WORKDIR /app
-COPY worker/requirements.txt .
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-COPY worker/ .
+COPY . .
 CMD ["python", "daily_job.py"]
